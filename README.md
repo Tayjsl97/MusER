@@ -3,8 +3,4 @@ This is the official implementation of MusER (AAAI'24), which employs musical el
 - [Paper link]()
 - Check our [demo page](https://tayjsl97.github.io/demos/aaai) and listen!<br>
 
-<img src="img/MusER.pdf" width="500" height="200" alt="model"/>
-
-begin{center}
-includegraphics[width=8in]{img/MusER.pdf}
-end{center}
+<img src="img/MusER.png" width="500" height="200" alt="model"/>
