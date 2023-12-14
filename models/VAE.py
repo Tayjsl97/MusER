@@ -160,7 +160,7 @@ class VAE(nn.Module):
         pitch=self.softmax(pitch)
         duration=self.softmax(duration)
         velocity=self.softmax(velocity)
-        return type, tempo, chord, bar_beat, pitch, duration, velocity, output, kl_loss
+        return type, tempo, chord, bar_beat, pitch, duration, velocity, kl_loss
 
     def inference(self,dictionary,memory,emotion=None):
         event2word, word2event = dictionary
