@@ -5,7 +5,6 @@ Created on Thu Dec 14 10:12:13 2023
 import time
 import math
 import random
-import string
 import numpy as np
 import torch
 import torch.nn.functional as F
@@ -185,7 +184,6 @@ def write_midi(words, path_outfile, word2event):
 # Sampling
 # refer to https://github.com/annahung31/EMOPIA/blob/main/workspace/transformer/utils.py
 ################################################################################
-# -- temperature -- #
 
 def softmax(a):
     c = np.max(a)
@@ -193,6 +191,7 @@ def softmax(a):
     sum_exp_a = np.sum(exp_a)
     y = exp_a/sum_exp_a
     return y
+
 
 def softmax_with_temperature(logits, temperature):
     c = np.max(logits)
@@ -203,7 +202,6 @@ def softmax_with_temperature(logits, temperature):
         return probs
 
 
-## gumbel
 def gumbel_softmax(logits, temperature):
     return F.gumbel_softmax(logits, tau=temperature, hard=True)
 
@@ -257,12 +255,5 @@ def sampling(logit, p=None, t=1.0, is_training=False):
         else:
             cur_word = weighted_sampling(probs)
         return cur_word
-
-
-def get_random_string(length):
-    # choose from all lowercase letter
-    letters = string.ascii_lowercase
-    result_str = ''.join(random.choice(letters) for i in range(length))
-    return result_str
 
 

@@ -152,7 +152,7 @@ class VQ_VAE(nn.Module):
         pitch=self.softmax(pitch)
         duration=self.softmax(duration)
         velocity=self.softmax(velocity)
-        return type, tempo, chord, bar_beat, pitch, duration, velocity, loss, output
+        return type, tempo, chord, bar_beat, pitch, duration, velocity, loss
 
     def inference(self,dictionary,memory,emotion=None):
         memory = self.latent_decoder_linear(memory)
