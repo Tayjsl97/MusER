@@ -3,5 +3,5 @@ This is the official implementation of **MusER (AAAI'24)**, which employs musica
 - [Paper link]()
 - Check our [demo page](https://tayjsl97.github.io/demos/aaai) and listen!<br>
 
-<img src="img/MusER.png" width="800" height="390" alt="model"/>
+<img src="img/MusER.png" width="770" height="350" alt="model"/>
 
