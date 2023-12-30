@@ -9,7 +9,7 @@ This is the official implementation of **MusER (AAAI'24)**, which employs musica
 The dependency packages can be found in requirements.txt file. One can use pip install -r requirements.txt to configure the environment. We use python 3.8 under Ubuntu 20.04.6 LTS to run the experiments. We highly recommend using the conda environment for deployment.
 
 ## Running the experiments
-1. First, train the `MusER`, use the following command:
+1.First, train the `MusER`, use the following command:
 ```{sh}
 python MusER.py --data_path ./data/co-representation/emopia_data.npz --dataset emopia --model_path your_model_saving_path --log_path your_log_path 
 ```
@@ -19,7 +19,7 @@ Explanations on the parameters:
 
 `dataset`: which dataset to train, choices include `emopia` and `ailabs` and should be consistent with data_path.
 
-2. Then, run the VQ_explore.py to get VQ_dict.data (store codebook discrete indexes that are actually used during training) for training prior model and visulizing the latent space:
+2.Then, run the VQ_explore.py to get VQ_dict.data (store codebook discrete indexes that are actually used during training) for training prior model and visulizing the latent space:
 ```{sh}
 python VQ_explore.py --data_path ./data/co-representation/emopia_data.npz --VQ_VAE MusER_TRANS_CA_GE_emopia --plot_flag True 
 ```
@@ -29,12 +29,12 @@ Explanations on the parameters:
 
 `plot_flag`: whether to plot latent space visualization map, boolean variable.
 
-3. Next, train the conditional autoregressive prior model:
+3.Next, train the conditional autoregressive prior model:
 ```{sh}
 python Prior_train.py --data_path ./data/co-representation/emopia_data.npz --dataset emopia --VQ_VAE MusER_TRANS_CA_GE_emopia --model_path your_prior_model_saving_path --log_path your_log_path 
 ```
 
-4. Finally, generate music using your trained MusER and Prior model:
+4.Finally, generate music using your trained MusER and Prior model:
 ```{sh}
 python generate.py --VQ_prior Prior_TRANS_CA_ER_emopia --VQ_VAE MusER_TRANS_CA_GE_emopia --music_file your_music_file_name 
 ```
