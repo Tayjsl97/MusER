@@ -6,7 +6,7 @@ This is the official implementation of **MusER (AAAI'24)**, which employs musica
 <img src="img/MusER.png" width="770" height="300" alt="model"/>
 
 ## Requirements
-The dependency packages can be found in requirements.txt file. One can use pip install -r requirements.txt to configure the environment. We use python 3.8 under Ubuntu 20.04.6 LTS to run the experiments. We highly recommend using the conda environment for deployment.
+The dependency packages can be found in `requirements.txt` file. One can use `pip install -r requirements.txt` to configure the environment. We use `python 3.8` under `Ubuntu 20.04.6 LTS` to run the experiments. We highly recommend using the conda environment for deployment.
 
 ## Running the experiments
 1.First, train the `MusER`, use the following command:
