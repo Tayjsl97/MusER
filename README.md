@@ -18,7 +18,7 @@ Explanations on the parameters:
 `data_path`: training data path.
 
 `dataset`: which dataset to train, choices include `emopia` and `ailabs` and should be consistent with data_path.
-
+<br>
 2.Then, run the VQ_explore.py to get VQ_dict.data (store codebook discrete indexes that are actually used during training) for training prior model and visulizing the latent space:
 ```{sh}
 python VQ_explore.py --data_path ./data/co-representation/emopia_data.npz --VQ_VAE MusER_TRANS_CA_GE_emopia --plot_flag True 
@@ -28,12 +28,12 @@ Explanations on the parameters:
 `VQ-VAE`: the name of the trained VQ-VAE model, such as `MusER_TRANS_CA_GE_emopia`.
 
 `plot_flag`: whether to plot latent space visualization map, boolean variable.
-
+<br>
 3.Next, train the conditional autoregressive prior model:
 ```{sh}
 python Prior_train.py --data_path ./data/co-representation/emopia_data.npz --dataset emopia --VQ_VAE MusER_TRANS_CA_GE_emopia --model_path your_prior_model_saving_path --log_path your_log_path 
 ```
-
+<br>
 4.Finally, generate music using your trained MusER and Prior model:
 ```{sh}
 python generate.py --VQ_prior Prior_TRANS_CA_ER_emopia --VQ_VAE MusER_TRANS_CA_GE_emopia --music_file your_music_file_name 
