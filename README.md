@@ -17,6 +17,17 @@ Explanations on the parameters:
 
 `data_path`: training data path.
 
-`dataset`: which dataset to train, choices include `emopia` and `ailabs` and consistent with data_path,.
+`dataset`: which dataset to train, choices include `emopia` and `ailabs` and should be consistent with data_path.
+
+## Reference
+If you find the code useful for your research, please consider citing
+```bib
+@article{ji2023muser,
+  title={MusER: Musical Element-Based Regularization for Generating Symbolic Music with Emotion},
+  author={Ji, Shulei and Yang, Xinyu},
+  journal={arXiv preprint arXiv:2312.10307},
+  year={2023}
+}
+```
 
 
