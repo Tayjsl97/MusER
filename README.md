@@ -20,7 +20,7 @@ Explanations on the parameters:
 `dataset`: which dataset to train, choices include `emopia` and `ailabs` and should be consistent with data_path.
 <br>
 
-2.Then, run the VQ_explore.py to get VQ_dict.data (store codebook discrete indexes that are actually used during training) for training prior model and visulizing the latent space:
+2.Then, run the VQ_explore.py to get VQ_dict.data (store codebook discrete indexes that are actually used during training) for training prior model and to visulize the latent space:
 ```{sh}
 python VQ_explore.py --data_path ./data/co-representation/emopia_data.npz --VQ_VAE MusER_TRANS_CA_GE_emopia --plot_flag True 
 ```
