@@ -53,11 +53,14 @@ Explanations on the parameters:
 ## Reference
 If you find the code useful for your research, please consider citing
 ```bib
-@article{ji2023muser,
+@inproceedings{ji2024muser,
   title={MusER: Musical Element-Based Regularization for Generating Symbolic Music with Emotion},
   author={Ji, Shulei and Yang, Xinyu},
-  journal={arXiv preprint arXiv:2312.10307},
-  year={2023}
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={11},
+  pages={12821--12829},
+  year={2024}
 }
 ```
 
